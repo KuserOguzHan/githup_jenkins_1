@@ -15,9 +15,9 @@ kubectl exec -it <jenkins-pod-name> -- /bin/bash
 ```
 sh /var/jenkins_home/jenkins-script.sh
 ```
-### 1. Basit bir script.sh dosyasını jenkins browserda çalıştırma.
+### 2. Basit bir script.sh dosyasını jenkins browserda çalıştırma.
 
--Jenkins pod'una giriş yap:
+- Jenkins pod'una giriş yap:
 
 ```
 kubectl exec -it <jenkins-pod-name> -- /bin/bash
@@ -26,4 +26,4 @@ kubectl exec -it <jenkins-pod-name> -- /bin/bash
 
 ```
 chmod +x /var/jenkins_home/jenkins-script.sh
-```# githup_jenkins_1
+```
