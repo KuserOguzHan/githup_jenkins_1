@@ -29,3 +29,34 @@ chmod +x /var/jenkins_home/jenkins-script.sh
 ```
 
 ### 3.
+
+```
+pipeline {
+    agent any
+
+    triggers {
+        githubPush()  // GitHub'dan gelen push'ları dinler
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/KuserOguzHan/githup_jenkins_1.git'
+            }
+        }
+
+        stage('Build and Run') {
+            steps {
+                sh 'chmod +x jenkins-script.sh'
+                sh './jenkins-script.sh'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
+```
