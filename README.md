@@ -28,7 +28,7 @@ kubectl exec -it <jenkins-pod-name> -- /bin/bash
 chmod +x /var/jenkins_home/jenkins-script.sh
 ```
 
-### 3.
+### 3. Jenkins Pipeline Script kısmına yazacağımız kod. Bu kodu "jenkinsfile" adında dosyada tutabiliriz.
 
 ```
 pipeline {

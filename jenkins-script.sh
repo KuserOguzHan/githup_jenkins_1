@@ -1,7 +1,7 @@
 sleep 5
 echo "####################################"
 sleep 5
-echo "Hello from Jenkins script!!!"
+echo "Jenkis bağlantsı başarlı !!!"
 sleep 5
 echo "####################################"
 sleep 3
