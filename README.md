@@ -59,6 +59,7 @@ pipeline {
         }
     }
 }
+
 ```
 - jenkins-script.sh dosyası
 ```
@@ -70,46 +71,8 @@ sleep 5
 echo "####################################"
 sleep 3
 ```
-### 4.Yeni satır
+### 4.FastApi 1.Adım
 
 ```
-pipeline {
-    agent any
-
-    triggers {
-        githubPush()  // GitHub'dan gelen push'ları dinler
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/KuserOguzHan/githup_jenkins_1.git'
-            }
-        }
-
-        stage('Virtualenv and Requirements') {
-            steps {
-                sh '''#!/bin/bash
-                python3 -m pip install virtualenv
-                python3 -m virtualenv fastapi
-                source fastapi/bin/activate
-                pip install -r requirements.txt
-                '''
-            }
-        }
-
-        stage('Build and Run') {
-            steps {
-                sh 'chmod +x jenkins-script.sh'
-                sh './jenkins-script.sh'
-            }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
-        }
-    }
-}
+uvicorn main:app --host 0.0.0.0 --port 8001
 ```
