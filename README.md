@@ -72,6 +72,7 @@ sleep 3
 ```
 ### 4.Yeni satır
 
+```
 pipeline {
     agent any
 
@@ -111,3 +112,4 @@ pipeline {
         }
     }
 }
+```
