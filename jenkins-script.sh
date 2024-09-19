@@ -1,7 +1,7 @@
 sleep 5
 echo "####################################"
 sleep 5
-echo "Jenkis bağlantsı başarlı !!!"
+echo "********J E N K I N S S S S ********* !!!"
 sleep 5
 echo "####################################"
 sleep 3
