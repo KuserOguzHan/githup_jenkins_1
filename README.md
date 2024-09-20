@@ -73,9 +73,11 @@ sleep 3
 ```
 ### 4.FastApi 1.Adım
 
+- Minikube çalıştır ve linkleri dene
 ```
-uvicorn main:app --host 0.0.0.0 --port 8001
+minikube service --all
 ```
+
 ```
 pipeline {
     agent any
@@ -97,7 +99,7 @@ pipeline {
                     echo 'Setting up Python virtual environment and installing requirements...'
                     sh '''#!/bin/bash
                     python3 -m venv venv
-                    source venv/bin/activate
+                    . venv/bin/activate
                     pip install -r requirements.txt
                     '''
                 }
@@ -110,7 +112,7 @@ pipeline {
                 script {
                     echo 'Starting FastAPI application with Uvicorn...'
                     sh '''#!/bin/bash
-                    source venv/bin/activate
+                    . venv/bin/activate
                     uvicorn main:app --host 0.0.0.0 --port 8002
                     '''
                 }
@@ -127,4 +129,8 @@ pipeline {
 }
 ```
 
-### 5. Eklendi
+### 5. Fastapi Arka planda çalışma
+
+
+
+
