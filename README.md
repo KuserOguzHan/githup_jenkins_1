@@ -127,4 +127,4 @@ pipeline {
 }
 ```
 
-### 5. YÜKLENİYORr
+### 5. YÜKLENİYORRR
