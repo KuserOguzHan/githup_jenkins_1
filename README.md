@@ -127,4 +127,4 @@ pipeline {
 }
 ```
 
-### 5. 
+### 5. Eklendi
